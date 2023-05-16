@@ -1,4 +1,5 @@
 import Card from './Card';
+import styles from './App.module.css';
 
 export default function Cards(props) {
    const array = props.characters;

@@ -1,12 +1,11 @@
-import './App.css';
-import Card from './components/Card.jsx';
+import styles from './components/App.module.css';
 import Cards from './components/Cards.jsx';
 import SearchBar from './components/SearchBar.jsx';
-import characters, { Rick } from './data.js';
+import characters from './data.js';
 
 function App() {
    return (
-      <div className='App'>
+      <div className={styles.App} >
          <SearchBar onSearch={(characterID) => window.alert(characterID)} />
          <Cards characters={characters} onClose={() => window.alert('Emulamos que se cierra la card')}/>
       </div>

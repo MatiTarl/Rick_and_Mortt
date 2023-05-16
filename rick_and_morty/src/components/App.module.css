@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css?family=Rancho&effect=shadow-multiple|3d-float");
+
+ 
+ .App {
+font-family: 'Courier New', Courier, monospace;
+background-image: url("https://images7.alphacoders.com/106/1062176.jpg");
+height: 2160px;
+} 
+.DivCartas:hover{
+   box-shadow: 0px 0px 11px 11px rgba(39, 25, 9, 0.658);
+   transform: scale(1.05,1.05);
+}
+.DivCartas {
+   background-color: rgb(235, 228, 228);
+   margin: 1%;
+   display: inline-block;
+   text-align: center;
+   width: 250px;
+   height: 400px;
+   border: 1px solid #000;
+   border-radius: 5%;
+}
+.DivCartas img{
+ width: 200px;
+ height: 200px;
+}
+.BotonBusqueda {
+background-color: #0c94e2a2;
+}
+.EntradaBoton {
+background-color: lightblue;
+}
+.Busqueda {
+background-color: antiquewhite;
+display: flex;
+justify-content: right;
+padding: 20px;
+}
+.DivBotonDelete {
+   display: flex;
+   justify-content: right;
+}
+.BotonDelete {
+   color: black;
+   background-color: crimson;
+   display: flex;
+   justify-content: right;
+}
+.BotonDelete:hover{
+background-color: black;
+color: crimson;
+}
+.Title {
+   font-size: 30px;
+}
+.SubTitulos  {
+font-family: 'Courier New', Courier, monospace;
+}
