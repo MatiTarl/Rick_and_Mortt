@@ -6,7 +6,8 @@ export default function Cards(props) {
    const boton = props.onClose;
    return <div>{
    array.map(e => <Card key={e.id} 
-      name={e.name} id={e.id} 
+      name={e.name} 
+      id={e.id} 
       image={e.image} 
       status={e.status} 
       species={e.species} 

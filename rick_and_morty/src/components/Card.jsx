@@ -6,15 +6,16 @@ export default function Card(props) {
    return (
       <div className={styles.DivCartas} > 
 
-      <h2 className={styles.Title}>{name}</h2>
-
 <div className={styles.DivBotonDelete}>
-      <button className={styles.BotonDelete} onClick={()=> onClose()}>X</button>
+      <button className={styles.BotonDelete} onClick={()=> onClose(id)}>X</button> 
 </div>
-      <img src={image} alt='imagen' /> 
+
+      <h2 className={styles.Title}>{name}</h2>
+      <img src={image} alt='imagen' />
+
 <article>
-      <p className={styles.SubTitulos}>Specie: {species}</p>
-      <p className={styles.SubTitulos}>Gender: {gender}</p>
+      <h4 className={styles.SubTitulos}>Specie: {species}</h4>
+      <h4 className={styles.SubTitulos}>Gender: {gender}</h4>
 </article>
          
       </div>
