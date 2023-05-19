@@ -1,9 +1,11 @@
-import styles from './components/App.module.css';
-import Cards from './components/Cards.jsx';
-import Nav from './components/Nav';
-//import characters from './data.js';
-import React from 'react';
+import About from './components/About';
 import axios from 'axios'
+import Cards from './components/Cards.jsx';
+import Detail from './components/Detail';
+import Nav from './components/Nav';
+import React from 'react';
+import {Routes, Route} from 'react-router-dom'
+import styles from './components/App.module.css';
 
 function App() {
 
@@ -24,7 +26,11 @@ function onSearch(id) {
    return (
       <div className={styles.App} >
          <Nav onSearch={onSearch} ></Nav> 
-         <Cards characters={characters} onClose={onClose}/>
+         <Routes>
+            <Route path='/home' element={<Cards characters={characters} onClose={onClose}/>} />
+            <Route path='/about' element={<About/>} />
+            <Route path='/detail:id' element={<Detail/>} />
+         </Routes>
       </div>
    );
 }
