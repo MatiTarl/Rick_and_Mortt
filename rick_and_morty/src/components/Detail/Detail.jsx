@@ -1,13 +1,11 @@
 import React from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
-import { useState } from "react";
-import { useEffect } from "react";
+import { useState, useEffect} from "react";
 
-export default function (props)  {
-const { id } = useParams();
-console.log(id);
-const [character, setCharacter] = useState({})
+const Detail = () => {
+ const [character, setCharacter] = useState({})
+ const { id } = useParams();
 
 useEffect(() => {
     axios(`https://rickandmortyapi.com/api/character/${id}`).then(({ data }) => {
@@ -20,14 +18,16 @@ useEffect(() => {
     return setCharacter({});
  }, [id]);
 
+
   return(
-    <div style={{backgroundColor: "lightblue"}}>
+    <div>
         <h1>Detail</h1>
-        <h2>{character.name}</h2>
         <img src={character.image} alt="image" />
-        <h3>{character.status}</h3>
-        <h3>{character.species}</h3>
-        <h3>{character.gender}</h3>
+        <h2>Name: {character.name}</h2>
+        <h3>Status: {character.status}</h3>
+        <h3>Species: {character.species}</h3>
+        <h3>Gender: {character.gender}</h3>
     </div>
   );
 }
+export default Detail;

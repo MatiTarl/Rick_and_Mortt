@@ -1,4 +1,4 @@
-import styles from './App.module.css';
+import styles from './SearchBar.module.css';
 import React from 'react';
 
 export default function SearchBar(props) {

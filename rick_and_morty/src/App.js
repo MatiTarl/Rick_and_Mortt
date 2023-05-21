@@ -1,14 +1,18 @@
-import About from './components/About';
+import About from './components/About/About';
 import axios from 'axios'
-import Cards from './components/Cards.jsx';
-import Detail from './components/Detail';
-import Nav from './components/Nav';
-import React from 'react';
-import {Routes, Route} from 'react-router-dom'
+import Cards from './components/Cards/Cards.jsx';
+import Detail from './components/Detail/Detail';
+import Forms from './components/Forms/Forms';
+import Nav from './components/Nav/Nav';
+import React, { useState, useEffect } from 'react';
+import {Routes, Route, useLocation, useNavigate} from 'react-router-dom'
 import styles from './components/App.module.css';
 
 function App() {
 
+const location = useLocation();
+
+//-------------------------------Conexion con la api para spawnear las cartas----------------------------------------
 const [characters, setCharacters] = React.useState([]);
 
 function onSearch(id) {
@@ -23,14 +27,38 @@ function onSearch(id) {
    function onClose(id){
    setCharacters( characters.filter( e => e.id !== id))
 }
+
+//-------------------------------LOGIN-------------------------------
+const navigate = useNavigate()
+const [access, setAccess] = useState(false);
+const EMAIL = 'Matiastari@Outlook.com.ar';
+const PASSWORD = 'Password123';
+
+function login(userData) {
+   if (userData.password === PASSWORD && userData.email === EMAIL){
+    setAccess(true);
+    navigate("/home");
+    }
+}
+useEffect(() => {
+   !access && navigate("/");
+}, [access])
+
+//--------------------------------------------------------------
    return (
       <div className={styles.App} >
-         <Nav onSearch={onSearch} ></Nav> 
+         {
+            location.pathname !== "/" ? <Nav onSearch={onSearch} ></Nav> : null
+         }
+
          <Routes>
+            <Route path='/' element={<Forms login={login} />} />
             <Route path='/home' element={<Cards characters={characters} onClose={onClose}/>} />
             <Route path='/about' element={<About/>} />
-            <Route path='/detail:id' element={<Detail/>} />
+            <Route path='/detail/:id' element={<Detail/>} />
          </Routes>
+
+         
       </div>
    );
 }

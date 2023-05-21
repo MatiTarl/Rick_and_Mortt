@@ -1,0 +1,21 @@
+.div {
+    display: flex;
+    justify-content: center;
+}
+.Home {
+    margin-top: 45%;
+    color: white;
+    background-color: transparent;
+    border: 0px solid #000;
+    transition: 0.3s;
+}
+.Home:hover {
+    background-color: lightgreen;
+    box-shadow: 0px 0px 10px rgb(255, 255, 255), 0 0 40px rgb(255, 255, 255), 0 0 80px rgb(255, 255, 255);
+}
+.About{
+    margin-top: 48%;
+    color: white;
+    background-color: transparent;
+    border: 0px solid #000;
+}
