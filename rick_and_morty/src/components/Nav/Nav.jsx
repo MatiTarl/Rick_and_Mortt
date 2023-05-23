@@ -11,11 +11,12 @@ export default function Nav ({onSearch}) {
         <NavLink to={"/home"}  >
             <button className={style.Home} >Home</button>
         </NavLink>
-        {
-            location.pathname === "/home" ? <SearchBar onSearch={onSearch}/> : null
-        }
+        {location.pathname === "/home" ? <SearchBar onSearch={onSearch}/> : null }
         <NavLink to={"/about"} >
             <button className={style.About} >About</button>
+        </NavLink>
+        <NavLink to={"/favorites"} >
+            <button className={style.About} >Favorites</button>
         </NavLink>
      </div>
     );

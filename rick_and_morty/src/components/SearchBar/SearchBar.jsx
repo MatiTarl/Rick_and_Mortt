@@ -13,10 +13,8 @@ export default function SearchBar(props) {
 
    return (
       <div className={styles.Busqueda}>
-         <div>
-               <input type="search" id="buscador" name="search" onChange={handleChange} className={styles.EntradaBoton} />
-               {<button className={styles.BotonBusqueda} onClick={() => searchfunction(id)}>Agregar</button>}  
-         </div>
+      <input type="search" id="buscador" name="search" onChange={handleChange} className={styles.input} />  
+      <button className={styles.Button} onClick={() => searchfunction(id)}>Agregar</button>
       </div>
    );
 }
