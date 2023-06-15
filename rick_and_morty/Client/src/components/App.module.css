@@ -1,20 +1,6 @@
-
- 
- .App {
+.App {
 font-family: 'Courier New', Courier, monospace;
-background-image: url("https://images7.alphacoders.com/106/1062176.jpg");
+background-image: url("https://images4.alphacoders.com/709/709935.jpg");
 min-height: 1000px;
 height: auto;
 } 
-
-
-
-
-.SubTitulos  {
-   text-decoration: none;
-   padding-left: 15px;
-   text-align: left;
-   font-family: Arial, Helvetica, sans-serif;
-   height: 20px;
-   color: black;
-}

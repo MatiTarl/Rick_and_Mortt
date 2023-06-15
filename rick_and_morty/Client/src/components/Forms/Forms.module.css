@@ -1,0 +1,56 @@
+.DivLogin {
+    background-image:  url("https://wallpapercave.com/wp/wp3277744.jpg");
+    font-family: 'Open Sans';
+    display: flex;
+    height: 711px;
+    justify-content: center; 
+    padding-top: 15%;
+    border: 1px solid #ffffff;
+}
+.DivLogin2 {
+    max-height: 300px;
+    min-width: 20%;
+    border-radius: 5%;
+    box-shadow: 0px 0px 5px 5px whitesmoke;
+}
+
+.DivEmail, .DivPassword {
+  background: transparent;
+  border: 0 solid;
+  border-bottom: 1px solid rgba(white, .5);
+  color: white;
+  display: block;
+  margin: 2rem;
+  padding: 1rem;
+  width: calc(100% - 6rem);
+  border-radius: 5px;
+}
+.DivEmail:focus , .DivPassword:focus {
+    background: white;
+    color: black;
+    transition: 250ms background ease-in;
+}
+.DivEmail:hover , .DivPassword:hover {
+    background: white;
+    transition: 3s;
+}
+.DivSubmit {
+    border: 1px solid transparent;
+    background: transparent;
+    color: white;
+    display: block;
+    margin: 2rem auto;
+    min-width: 3px;
+    padding: .5rem;
+    border-radius: 12%;
+}
+.DivSubmit:hover {
+    transition: 1s;
+    background-color:#ffffff;
+    color: #000;
+}
+.DivError {
+    color: white;
+    text-align: center;
+    max-width: 370px;
+}
